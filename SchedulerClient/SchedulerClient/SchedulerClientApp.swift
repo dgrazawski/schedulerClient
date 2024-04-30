@@ -14,7 +14,7 @@ struct SchedulerClientApp: App {
       init() {
         do {
             
-            modelContainer = try ModelContainer(for: SearchListModel.self)
+            modelContainer = try ModelContainer(for: SearchListModel.self, MeetingModel.self)
         } catch {
           fatalError("Could not initialize ModelContainer")
         }
@@ -24,7 +24,8 @@ struct SchedulerClientApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .modelContainer(modelContainer)
+                
         }
+        .modelContainer(modelContainer)
     }
 }

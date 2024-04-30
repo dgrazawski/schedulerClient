@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class SearchListModel: Codable {
-    @Attribute(.unique) var id: UUID
+    var id: UUID
     var universityName: String
     var facultyName: String
     var year: Int

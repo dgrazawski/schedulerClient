@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF330BB02BE0DAE2000156F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF330BAF2BE0DAE2000156F7 /* NetworkManager.swift */; };
+		DF423F3D2BDEE615009D7E52 /* MeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF423F3C2BDEE615009D7E52 /* MeetingModel.swift */; };
+		DF423F3F2BDEEB37009D7E52 /* TileOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF423F3E2BDEEB37009D7E52 /* TileOnView.swift */; };
+		DF4CBA472BE12A7B0053F722 /* AllocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4CBA462BE12A7A0053F722 /* AllocationModel.swift */; };
 		DF5B9ED02BDE931700669EA5 /* SearchListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B9ECF2BDE931700669EA5 /* SearchListModel.swift */; };
 		DF5B9ED32BDE989600669EA5 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DF5B9ED22BDE989600669EA5 /* CodeScanner */; };
 		DF5B9ED52BDE9DD000669EA5 /* PlanTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B9ED42BDE9DD000669EA5 /* PlanTileView.swift */; };
@@ -42,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF330BAF2BE0DAE2000156F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DF330BB12BE0DC6B000156F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DF423F3C2BDEE615009D7E52 /* MeetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingModel.swift; sourceTree = "<group>"; };
+		DF423F3E2BDEEB37009D7E52 /* TileOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileOnView.swift; sourceTree = "<group>"; };
+		DF4CBA462BE12A7A0053F722 /* AllocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocationModel.swift; sourceTree = "<group>"; };
 		DF5B9ECF2BDE931700669EA5 /* SearchListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListModel.swift; sourceTree = "<group>"; };
 		DF5B9ED42BDE9DD000669EA5 /* PlanTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTileView.swift; sourceTree = "<group>"; };
 		DF5B9ED62BDEA97C00669EA5 /* PlanDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDisplayView.swift; sourceTree = "<group>"; };
@@ -87,10 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF330BAE2BE0DAD0000156F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF330BAF2BE0DAE2000156F7 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DF5B9ECE2BDE930000669EA5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DF5B9ECF2BDE931700669EA5 /* SearchListModel.swift */,
+				DF423F3C2BDEE615009D7E52 /* MeetingModel.swift */,
+				DF4CBA462BE12A7A0053F722 /* AllocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,15 +137,11 @@
 		DF6C35F72BD032370096816E /* SchedulerClient */ = {
 			isa = PBXGroup;
 			children = (
+				DF330BB12BE0DC6B000156F7 /* Info.plist */,
+				DF330BAE2BE0DAD0000156F7 /* Services */,
+				DF8558022BE0092F004094B8 /* Views */,
 				DF5B9ECE2BDE930000669EA5 /* Models */,
 				DF6C35F82BD032370096816E /* SchedulerClientApp.swift */,
-				DF6C35FA2BD032370096816E /* ContentView.swift */,
-				DF6C36242BD034EB0096816E /* SearchPlansView.swift */,
-				DF5B9ED42BDE9DD000669EA5 /* PlanTileView.swift */,
-				DF5B9EDA2BDEB1D000669EA5 /* AddedPlanTileView.swift */,
-				DF6C36222BD034530096816E /* PlansListView.swift */,
-				DF5B9ED62BDEA97C00669EA5 /* PlanDisplayView.swift */,
-				DF5B9ED82BDEAE3500669EA5 /* DayPlanView.swift */,
 				DF6C35FC2BD032390096816E /* Assets.xcassets */,
 				DF6C35FE2BD032390096816E /* Preview Content */,
 			);
@@ -156,6 +171,21 @@
 				DF6C36152BD0323A0096816E /* SchedulerClientUITestsLaunchTests.swift */,
 			);
 			path = SchedulerClientUITests;
+			sourceTree = "<group>";
+		};
+		DF8558022BE0092F004094B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF6C35FA2BD032370096816E /* ContentView.swift */,
+				DF6C36242BD034EB0096816E /* SearchPlansView.swift */,
+				DF5B9ED42BDE9DD000669EA5 /* PlanTileView.swift */,
+				DF5B9EDA2BDEB1D000669EA5 /* AddedPlanTileView.swift */,
+				DF6C36222BD034530096816E /* PlansListView.swift */,
+				DF5B9ED62BDEA97C00669EA5 /* PlanDisplayView.swift */,
+				DF5B9ED82BDEAE3500669EA5 /* DayPlanView.swift */,
+				DF423F3E2BDEEB37009D7E52 /* TileOnView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF330BB02BE0DAE2000156F7 /* NetworkManager.swift in Sources */,
 				DF5B9ED92BDEAE3500669EA5 /* DayPlanView.swift in Sources */,
 				DF5B9ED72BDEA97C00669EA5 /* PlanDisplayView.swift in Sources */,
 				DF5B9ED02BDE931700669EA5 /* SearchListModel.swift in Sources */,
@@ -301,8 +332,11 @@
 				DF6C36232BD034530096816E /* PlansListView.swift in Sources */,
 				DF6C35F92BD032370096816E /* SchedulerClientApp.swift in Sources */,
 				DF6C36252BD034EB0096816E /* SearchPlansView.swift in Sources */,
+				DF423F3F2BDEEB37009D7E52 /* TileOnView.swift in Sources */,
 				DF5B9ED52BDE9DD000669EA5 /* PlanTileView.swift in Sources */,
 				DF5B9EDB2BDEB1D000669EA5 /* AddedPlanTileView.swift in Sources */,
+				DF423F3D2BDEE615009D7E52 /* MeetingModel.swift in Sources */,
+				DF4CBA472BE12A7B0053F722 /* AllocationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +503,8 @@
 				DEVELOPMENT_TEAM = V57Q3RT4P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SchedulerClient/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "For QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,6 +534,8 @@
 				DEVELOPMENT_TEAM = V57Q3RT4P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SchedulerClient/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "For QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
